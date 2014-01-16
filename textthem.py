@@ -1,9 +1,10 @@
 from twilio.rest import TwilioRestClient
-from .twilio_settings import TOKEN, SID, TWILIO_NUMBER, CUSEC_GROUP
+from twilio_settings import TOKEN, SID, TWILIO_NUMBER, ME, UTSC, UTSG
 
 client = TwilioRestClient(SID, TOKEN)
 
-BODY = "Breakfast is being served tomorrow at 9am. Registration starts at 8am. There are a limited amount of swag bags."
+CUSEC_GROUP = ME + UTSC + UTSG
+BODY = "Resume roast at 12:30pm and Career Fair starts 1:30pm. Shouldn't miss either"
 
 if __name__ == "__main__":
     for delegate in CUSEC_GROUP:
